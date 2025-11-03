@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acem telecom — soluções em transmissão de dados, redes de rádio digital e fibra óptica para empresas e provedores.">
+    <title>Acem telecom</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/acem.png" alt="Logo Acem">
+        </div>
+        <nav class="nav-right" aria-label="Menu principal">
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Nossos Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1 class="slide-left">Acem telecom</h1>
+        <p class="fade-in">Somos especializados em transmissão de dados.
+            Construímos e gerenciamos redes de rádio digital e fibra ótica para circuitos de
+            internet dedicados e semidedicados para atender as necessidades do seu negócio.</p>
+        <button type="button" class="btn-main" onclick="scrollToServices()">Conheça nossos Serviços</button>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="servicos" id="servicos">
+        <h1>Nossos Serviços</h1>
+        <div class="cards">
+            <div class="wrapper">
+                <h3>Internet para Empresas</h3>
+                <p class="servico">Conexão com velocidade 100% dedicada através de fibra ótica e rádio digital.</p>
+            </div>
+
+            <div class="wrapper">
+                <h3>Acesso PTT</h3>
+                <p class="servico">A maneira mais dinâmica para acessar conteúdos regionais.</p>
+            </div>
+
+            <div class="wrapper">
+                <h3>Transporte de Dados para Operadoras</h3>
+                <p class="servico">Conexões de ponto a ponto em uma rede exclusiva.</p>
+            </div>
+
+            <div class="wrapper">
+                <h3>Redes Customizadas</h3>
+                <p class="servico">Redes adequadas para atender as suas necessidades.</p>
+            </div>
+
+            <div class="wrapper">
+                <h3>Internet para Provedores</h3>
+                <p class="servico">Internet dedicada para provedores de Acesso à Internet</p>
+            </div>
+
+            <div class="wrapper">
+                <h3>Link Dedicado Temporário</h3>
+                <p class="servico">Serviços de internet para eventos.</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section id="cotacao">
+        <div class="info">
+            <h3>Quer saber mais?</h3>
+            <p>Entre em contato com nossos atendentes, para verificar nossos planos atuais, disponibilidade de fibra
+                outras condições.</p>
+            <button type="button" class="btn-main" onclick="openContatos()">Faça uma Cotação</button>
+        </div>
+    </section>
+
+    <div class="transition-section"></div>
+
+    <footer class="footer" id="contato">
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><i class="fas fa-phone"></i> <a href="tel:+555142607000">(51) 4260-7000</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:comercial@acem.net.br">comercial@acem.net.br</a></li>
+                <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/acemtelecom/" target="_blank" rel="noopener noreferrer">@acemtelecom</a></li>
+            </ul>
+        </div>
+        <p class="copy">&copy; 2025 Acem telecom - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function scrollToServices() {
+            document.getElementById("servicos").scrollIntoView({ behavior: "smooth" });
+        }
+
+        function openContatos() {
+            document.getElementById("contato").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+
+</html>
