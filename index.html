@@ -80,9 +80,18 @@
             <h3>Quer saber mais?</h3>
             <p>Entre em contato com nossos atendentes, para verificar nossos planos atuais, disponibilidade de fibra
                 outras condições.</p>
-            <button type="button" class="btn-main" onclick="openContatos()">Faça uma Cotação</button>
+            <button type="button" class="btn-main" onclick="openPopup()">Faça uma Cotação</button>
         </div>
     </section>
+
+    <!-- Pop-up da seção de cotação-->
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Entre em contato concosco</h2>
+            <p>Contéudo do popup fica aqui. Inserir telefone e e-mail</p>
+        </div>
+    </div>
 
     <div class="transition-section"></div>
 
@@ -104,6 +113,23 @@
 
         function openContatos() {
             document.getElementById("contato").scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Função para abrir o pop-up
+        function openPopup() {
+        document.getElementById("myPopup").classList.add("active");
+        }
+
+        // Função para fechar o pop-up
+        function closePopup() {
+        document.getElementById("myPopup").classList.remove("active");
+        }
+
+        // Fechar o pop-up ao clicar fora dele
+        window.onclick = function(event) {
+        if (event.target == document.getElementById("myPopup")) {
+        document.getElementById("myPopup").classList.remove("active");
+            }  
         }
     </script>
 </body>
