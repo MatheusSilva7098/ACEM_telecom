@@ -77,12 +77,12 @@ body {
 
 /* Hero */
 .hero {
-  padding: 3rem 1rem;
+ /*padding: 3rem 1rem;*/
   text-align: center;
-  background: linear-gradient(180deg, rgba(26,43,109,0.05), transparent 60%);
+  /*background: linear-gradient(180deg, rgba(26,43,109,0.05), transparent 60%);*/
 }
 .hero h1 {
-  color: var(--primary-700);
+  color: #fff;
   font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   margin-bottom: 0.5rem;
   animation: slide-left 1s ease-out;
@@ -90,14 +90,28 @@ body {
 .hero p {
   max-width: 900px;
   margin: 0.5rem auto 1.25rem;
-  color: var(--color-text);
+  color: #fff;
   line-height: 1.5;
   animation: fade in 2s ease;
 }
+/* Imagem de fundo */
+.image-container {
+  position: relative;
+  display: inline-flexbox;
+}
 
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Seção de serviços */
 .servicos {
   padding: 3rem 1rem;
-  text-align: left;
+  text-align: center;
   background: linear-gradient(0deg, rgba(26,43,109,0.05), transparent 60%);
 }
 
@@ -116,7 +130,7 @@ body {
 }
 
 /* Cards / serviços */
-.cards { 
+.cards {
   border-radius: 8px;
   color: var(--primary-700);
   margin: 1.5rem auto;
@@ -127,7 +141,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.wrapper, .info {
+.wrapper {
   background: #f0f0f0;
   border-radius: 8px;
   padding: 1rem;
@@ -139,8 +153,34 @@ body {
 }
 /* Cards reagem ao mouse */
 .wrapper:hover {
-   transform: translateY(-10px);
-   transition: transform 0.3s
+  transform: translateY(-10px);
+  transition: transform 0.3s
+}
+
+.info {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-info {
+  background: var(--primary-700);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 3rem;
+}
+.btn-info:hover {
+  background: var(--primary-500);
 }
 
 /* Tipografia */
@@ -174,6 +214,7 @@ h3 {
   width: 80%;
   max-width: 500px;
   position: relative;
+  align-self: center;
 }
 
 /* Botão de fechar */
@@ -197,17 +238,29 @@ h3 {
   padding: 1.25rem 1rem;
 }
 .footer .footer-content {
-  display: flex;
+  display: inline-flexbox;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  text-align: center;
+  
 }
 .footer .footer-links {
   list-style: none;
-  display: flex;
+  display: grid;
   gap: 1rem;
   padding: 0;
   margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  position: relative;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  
 }
 .footer a { color: #fff; text-decoration: none; }
 .footer a:hover { color: var(--primary-500); }
