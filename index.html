@@ -26,14 +26,14 @@
     </header>
 
     <section class="hero" id="inicio">
+        <figure class="hero-image">
+            <img src="assets/hero_image.jpg" alt="">
         <h1 class="slide-left">Acem telecom</h1>
         <p class="fade-in">Somos especializados em transmissão de dados.
             Construímos e gerenciamos redes de rádio digital e fibra ótica para circuitos de
             internet dedicados e semidedicados para atender as necessidades do seu negócio.</p>
         <button type="button" class="btn-main" onclick="scrollToServices()">Conheça nossos Serviços</button>
     </section>
-    <br>
-    <br>
     <br>
     <br>
     <br>
@@ -87,7 +87,7 @@
     <!-- Pop-up da seção de cotação-->
     <div id="myPopup" class="popup">
         <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
+            <button class="close" type="button" onclick="closePopup()" aria-label="Fechar pop-up">&times;</button>
             <h2>Fale com um de nossos atendentes e consulte as condições</h2>
             <br>
             <p class="footer-links">
@@ -104,10 +104,13 @@
     <footer class="footer" id="contato">
         <div class="footer-content">
             <ul class="footer-links">
+                <h2>Contato</h2>
+                <li><i class="fas fa-phone"></i> <a href="tel:+555142607000">(51) 4260-7000</a></li>
                 <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/acemtelecomoficial/" target="_blank" rel="noopener noreferrer">@acemtelecomoficial</a></li>
                 <li><i class="fas fa-envelope"></i> <a href="mailto:comercial@acem.net.br">comercial@acem.net.br</a></li>
                 <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/acemtelecom/" target="_blank" rel="noopener noreferrer">@acemtelecom</a></li>
                 <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/company/acem-telecom/" target="_blank" rel="noopener noreferrer">Acem Telecom</a></li>
+                <a href="#inicio" class="footer-logo"><img src="assets/logo_acem.png" alt="Acem Telecom - Início"></a>
             </ul>
         </div>
         <p class="copy">&copy; 2025 Acem telecom - Todos os direitos reservados</p>
@@ -133,10 +136,10 @@
         }
 
         // Fechar o pop-up ao clicar fora dele
-        window.onclick = function(event) {
+        globalThis.onclick = function(event) {
         if (event.target == document.getElementById("myPopup")) {
         document.getElementById("myPopup").classList.remove("active");
-            }  
+            }
         }
     </script>
 </body>
