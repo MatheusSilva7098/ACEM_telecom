@@ -169,18 +169,11 @@ body {
   text-align: center;
 }
 
-.btn-info {
-  background: var(--primary-700);
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  margin: 3rem;
-}
-.btn-info:hover {
-  background: var(--primary-500);
+#cotacao {
+  padding: 3rem 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Tipografia */
@@ -280,7 +273,7 @@ svg {
 /* Responsividade adicional */
 @media (max-width: 520px) {
   .nav-links { gap: 0.75rem; padding: 8px; }
-  .hero { padding: 2rem 0.75rem; }
+  /*.hero { padding: 1rem 0.75rem; }*/
   .footer .footer-content { flex-direction: column; align-items: flex-start; }
 }
 
